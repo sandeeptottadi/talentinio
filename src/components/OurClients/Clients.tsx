@@ -59,6 +59,30 @@ export default function Clients() {
     return () => clearInterval(intervalId);
   });
 
+  useEffect(() => {
+    const testimonialsElement = document.getElementById("testimonials");
+
+    const handleScroll = (event: WheelEvent) => {
+      if (event.deltaY < 0) {
+        // Scroll up
+        slide(
+          currSlide > 1 ? currSlide - 1 : Math.ceil(testimonials.length / 2)
+        );
+      } else {
+        // Scroll down
+        slide(
+          currSlide < Math.ceil(testimonials.length / 2) ? currSlide + 1 : 1
+        );
+      }
+    };
+
+    testimonialsElement?.addEventListener("wheel", handleScroll);
+
+    return () => {
+      testimonialsElement?.removeEventListener("wheel", handleScroll);
+    };
+  }, [currSlide, testimonials.length]);
+
   function slide(n: number) {
     document
       .querySelectorAll("." + styles.testimonial)
