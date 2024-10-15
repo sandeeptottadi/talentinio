@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import bg from "../../Assets/work-process/white-bg.png";
+import pattern from "../../Assets/work-process/dotted-pattern-1.png";
 
 export default function WorkingProcess() {
   const process: string[] = [
@@ -16,6 +17,10 @@ export default function WorkingProcess() {
         <span className="text-[#F2960D]">P</span>rocess
       </div>
       <div className={styles.process}>
+        <div className={styles.pattern}>
+          <div className={styles.dark_ball}></div>
+          <img src={pattern} alt="pattern" />
+        </div>
         {process.map((step, index) => {
           return (
             <div key={index} className={styles.step}>

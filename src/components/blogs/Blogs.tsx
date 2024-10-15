@@ -46,10 +46,6 @@ export default function Blogs() {
         Get to know about latest Market trends in recruitment
       </div>
       <div className={styles.blogs}>
-        <div className={styles.pattern}>
-          <div className={styles.dark_ball}></div>
-          <img src={pattern} alt="pattern" />
-        </div>
         {blogs.map((blog, index) => {
           return (
             <div key={index} className={styles.blog}>
