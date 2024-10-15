@@ -52,9 +52,11 @@ export default function Clients() {
   const [currSlide, setCurrentSlide] = React.useState(1);
 
   useEffect(() => {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       slide(currSlide < Math.ceil(testimonials.length / 2) ? currSlide + 1 : 1);
     }, 5000);
+
+    return () => clearInterval(intervalId);
   });
 
   function slide(n: number) {

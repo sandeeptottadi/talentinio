@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import image1 from "../../Assets/blogs/image-1.jpg";
 import image2 from "../../Assets/blogs/image-2.jpg";
 import image3 from "../../Assets/blogs/image-3.jpg";
+import pattern from "../../Assets/work-process/dotted-pattern-1.png";
 
 export default function Blogs() {
   interface Blog {
@@ -45,6 +46,10 @@ export default function Blogs() {
         Get to know about latest Market trends in recruitment
       </div>
       <div className={styles.blogs}>
+        <div className={styles.pattern}>
+          <div className={styles.dark_ball}></div>
+          <img src={pattern} alt="pattern" />
+        </div>
         {blogs.map((blog, index) => {
           return (
             <div key={index} className={styles.blog}>

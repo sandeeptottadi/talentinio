@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   width: 100%;
   margin-top: 100px;
   text-align: center;
@@ -15,6 +16,7 @@
 }
 
 .blogs {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +24,7 @@
   gap: 50px;
   margin-top: 60px;
   margin-bottom: 60px;
+  z-index: 1;
 }
 
 .blog {
@@ -87,4 +90,20 @@
 
 .all_blogs_link:hover {
   color: black;
+}
+
+.pattern {
+  position: absolute;
+  left: 10%;
+  transform: translate(-50%);
+  bottom: 10%;
+  z-index: -1;
+}
+
+.dark_ball {
+  height: 15px;
+  width: 15px;
+  background-color: #6c6c6b;
+  border-radius: 50%;
+  margin-bottom: 25px;
 }
