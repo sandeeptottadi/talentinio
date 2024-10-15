@@ -1,0 +1,62 @@
+.container {
+  margin-top: 150px;
+}
+
+.cards {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: fit-content;
+  padding: 50px 30px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0ed9ac;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #0ed9ac;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.count {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.card:hover::after {
+  width: 100%;
+  color: white;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}

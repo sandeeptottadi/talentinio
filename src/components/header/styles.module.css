@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  min-height: 90px;
+  z-index: 9;
+  top: 0;
+}
+
+.transparent-header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.header ul li img {
+  width: 20px;
+  height: 20px;
+}

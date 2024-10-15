@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.content {
+  width: 50%;
+  padding: 0px 150px;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #f2960d;
+  font-weight: 600;
+}
+
+.sub_title {
+  margin-top: 15px;
+
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.2rem;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+}
+
+.know_more_btn {
+  margin-top: 30px;
+  background-color: #f2960d;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.image {
+  position: relative;
+  width: 50%;
+  height: fit-content;
+}
+
+.image_container {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+}
+
+.main_img {
+  position: relative;
+  z-index: 2;
+}
+
+.image_container::after {
+  content: "";
+  background-color: #f2960d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  border-radius: 10px;
+  transform: rotate(-5deg);
+}
+
+.dotted_pattern_1 {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  animation: move-x-1 10s linear infinite alternate;
+}
+
+.dotted_pattern_2 {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  transform: translate(50%, 0%);
+  animation: move-x-2 10s linear infinite alternate;
+}
+
+@keyframes move-x-1 {
+  0% {
+    transform: translate(-50%, -50%) translateX(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(100%);
+  }
+}
+
+@keyframes move-x-2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
